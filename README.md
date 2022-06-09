@@ -1,6 +1,4 @@
-# volto-csFeatured-block
-
-[![Releases](https://gitlab.com/codesyntax/volto-csFeatured-block/-/badges/release.svg)](https://gitlab.com/codesyntax/volto-csFeatured-block/-/releases/permalink/latest)
+# volto-featured-block
 
 
 [Volto](https://github.com/plone/volto) add-on
@@ -11,7 +9,7 @@ Demo GIF
 
 ## Getting started
 
-### Try volto-csFeatured-block with Docker
+### Try volto-featured-block with Docker
 
 1. Get the latest Docker images
 
@@ -28,12 +26,12 @@ Demo GIF
 1. Start Volto frontend
 
    ```
-   docker run -it --rm -p 3000:3000 --link plone -e ADDONS="@eeacms/volto-csFeatured-block" plone/volto
+   docker run -it --rm -p 3000:3000 --link plone -e ADDONS="@codesyntax/volto-featured-block" plone/volto
    ```
 
 1. Go to http://localhost:3000
 
-### Add volto-csFeatured-block to your Volto project
+### Add volto-featured-block to your Volto project
 
 1. Make sure you have a [Plone backend](https://plone.org/download) up-and-running at http://localhost:8080/Plone
 
@@ -43,11 +41,11 @@ Demo GIF
 
    ```JSON
    "addons": [
-       "volto-csFeatured-block"
+       "@codesyntax/volto-featured-block"
    ],
 
    "dependencies": {
-       "volto-csFeatured-block": "^1.0.0"
+       "@codesyntax/volto-featured-block": "^1.0.0"
    }
    ```
 
@@ -55,7 +53,7 @@ Demo GIF
 
    ```
    npm install -g yo @plone/generator-volto
-   yo @plone/volto my-volto-project --addon @eeacms/volto-csFeatured-block
+   yo @plone/volto my-volto-project --addon @codesyntax/volto-featured-block
    cd my-volto-project
    ```
 
@@ -72,16 +70,13 @@ Demo GIF
 
 ## Release
 
-See [RELEASE.md](https://gitlab.com/codesyntax/volto-csFeatured-block/blob/master/RELEASE.md).
+See [RELEASE.md](https://github.com/codesyntax/volto-featured-block/blob/master/RELEASE.md).
 
 ## How to contribute
 
-See [DEVELOP.md](https://gitlab.com/codesyntax/volto-csFeatured-block/blob/master/DEVELOP.md).
+See [DEVELOP.md](https://github.com/codesyntax/volto-featured-block/blob/master/DEVELOP.md).
 
 ## Copyright and license
 
-All Rights Reserved.
-
-See [LICENSE.md](https://gitlab.com/codesyntax/volto-csFeatured-block/blob/master/LICENSE.md) for details.
-
+See [LICENSE.md](https://github.com/codesyntax/volto-featured-block/blob/master/LICENSE.md) for details.
 
