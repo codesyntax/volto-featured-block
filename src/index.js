@@ -4,7 +4,7 @@ import {
   FeaturedBlockView,
   FeaturedBlockEdit,
 } from './components/Blocks/FeaturedBlock';
-import { CarouselFeaturedView } from 'volto-ueu/components/Blocks/FeaturedBlock/Variations';
+import { CarouselFeaturedView } from './components/Blocks/FeaturedBlock/Variations';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig = {
