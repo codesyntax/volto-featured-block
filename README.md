@@ -72,20 +72,16 @@ Demo GIF
 
 ## Release
 
-See [RELEASE.md](https://github.com/eea/volto-csFeatured-block/blob/master/RELEASE.md).
+See [RELEASE.md](https://gitlab.com/codesyntax/volto-csFeatured-block/blob/master/RELEASE.md).
 
 ## How to contribute
 
-See [DEVELOP.md](https://github.com/eea/volto-csFeatured-block/blob/master/DEVELOP.md).
+See [DEVELOP.md](https://gitlab.com/codesyntax/volto-csFeatured-block/blob/master/DEVELOP.md).
 
 ## Copyright and license
 
-The Initial Owner of the Original Code is European Environment Agency (EEA).
 All Rights Reserved.
 
-See [LICENSE.md](https://github.com/eea/volto-csFeatured-block/blob/master/LICENSE.md) for details.
+See [LICENSE.md](https://gitlab.com/codesyntax/volto-csFeatured-block/blob/master/LICENSE.md) for details.
 
-## Funding
-
-[European Environment Agency (EU)](http://eea.europa.eu)
 
