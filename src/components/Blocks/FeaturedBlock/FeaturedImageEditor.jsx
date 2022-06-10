@@ -133,10 +133,8 @@ const FeaturedImageEditor = (props) => {
                           onSelectItem: (_url, element) =>
                             onChangeBlock(block, {
                               ...data,
-                              image: {
-                                url: element['@id'],
-                                alt: element.title,
-                              },
+                              url: `../resolveuid/${element['UID']}`,
+                              image_alt: element.title,
                             }),
                         });
                       }}
