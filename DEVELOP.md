@@ -10,15 +10,15 @@ Before starting make sure your development environment is properly set. See [Vol
 
 1.  Create new volto app
 
-        yo @plone/volto my-volto-project --addon @eeacms/volto-featured-block --skip-install
+        yo @plone/volto my-volto-project --addon @codesyntax/volto-featured-block --skip-install
         cd my-volto-project
 
 1.  Add the following to `mrs.developer.json`:
 
         {
             "volto-featured-block": {
-                "url": "https://github.com/eea/volto-featured-block.git",
-                "package": "@eeacms/volto-featured-block",
+                "url": "https://github.com/codesyntax/volto-featured-block.git",
+                "package": "@codesyntax/volto-featured-block",
                 "branch": "develop",
                 "path": "src"
             }
