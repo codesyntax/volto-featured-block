@@ -1,7 +1,11 @@
 # volto-featured-block
 
 
-[Volto](https://github.com/plone/volto) add-on
+[Volto](https://github.com/plone/volto) add-on to create pages with arbitrary content based on a simple schema (title + image + text), that can be extended using schemaEnhancers and that support variations. The content of the block is not based in some other content of the site (for instance in [volto-blocks-grid](https://github.com/kitconcept/volto-blocks-grid) the Teaser block content comes initially from a given content of the site).
+
+This block is intended to build front pages or landing pages where usually a lot of simple content need to be added and that content is not coming from existing content.
+
+It provides extension mechanisms using schemaExtenders and variations to add new templates or fields to it.
 
 ## Features
 
