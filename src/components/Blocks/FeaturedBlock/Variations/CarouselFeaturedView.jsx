@@ -32,7 +32,6 @@ const CarouselFeaturedView = (props) => {
               {data.linkText && (
                 <Button
                   as="a"
-                  className="ueu"
                   size="large"
                   href={'' + data?.link?.[0]?.['@id']}
                   primary
