@@ -85,7 +85,7 @@ const FeaturedImageEditor = (props) => {
       if (request.loaded && !request.loading && uploading) {
         onChangeBlock(block, {
           ...data,
-          url: `../resolveuid/${content['UID']}`,
+          url: `resolveuid/${content['UID']}`,
           image_alt: content?.image?.filename,
         });
         setUploading(false);
@@ -97,7 +97,7 @@ const FeaturedImageEditor = (props) => {
   const intl = useIntl();
   return (
     <>
-      {!data.image?.url && (
+      {!data.url && (
         <Message className="image-message">
           {selected && uploading && (
             <Dimmer active>
@@ -133,7 +133,7 @@ const FeaturedImageEditor = (props) => {
                           onSelectItem: (_url, element) =>
                             onChangeBlock(block, {
                               ...data,
-                              url: `../resolveuid/${element['UID']}`,
+                              url: `resolveuid/${element['UID']}`,
                               image_alt: element.title,
                             }),
                         });
@@ -147,7 +147,7 @@ const FeaturedImageEditor = (props) => {
           </center>
         </Message>
       )}
-      {!!data.image?.url && selected && (
+      {!!data.url && selected && (
         <>
           <Message className="image-message">
             <center>
@@ -164,7 +164,7 @@ const FeaturedImageEditor = (props) => {
                       onSelectItem: (url, element) =>
                         onChangeBlock(block, {
                           ...data,
-                          url: `../resolveuid/${element['UID']}`,
+                          url: `resolveuid/${element['UID']}`,
                           image_alt: element?.title,
                         }),
                     });
@@ -176,7 +176,7 @@ const FeaturedImageEditor = (props) => {
                       onSelectItem: (url, element) =>
                         onChangeBlock(block, {
                           ...data,
-                          url: `../resolveuid/${element['UID']}`,
+                          url: `resolveuid/${element['UID']}`,
                           image_alt: element?.title,
                         }),
                     });
