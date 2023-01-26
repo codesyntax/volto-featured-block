@@ -1,6 +1,6 @@
 {
   "name": "@codesyntax/volto-featured-block",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "@codesyntax/volto-featured-block: Volto add-on",
   "main": "src/index.js",
   "author": "Ion Lizarazu <ilizarazu@codesyntax.com>",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@plone/scripts": "*",
-    "release-it": "^15.1.1"
+    "release-it": "^15.6.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
