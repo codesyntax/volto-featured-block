@@ -16,13 +16,6 @@
     "type": "git",
     "url": "git@github.com:codesyntax/volto-featured-block.git"
   },
-<<<<<<< HEAD
-=======
-  "dependencies": {
-    "@plone/scripts": "*",
-    "release-it": "^15.6.0"
-  },
->>>>>>> 2f1dab0 (Automated release 0.7.0)
   "devDependencies": {
     "@babel/eslint-parser": "7.22.15",
     "@plone/scripts": "^3.0.0",
