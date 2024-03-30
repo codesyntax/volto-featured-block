@@ -7,6 +7,17 @@ This block is intended to build front pages or landing pages where usually a lot
 
 It provides extension mechanisms using schemaExtenders and variations to add new templates or fields to it.
 
+## Installation
+
+Add this addon to your project's dependencies:
+
+```
+   dependencies: {
+      '@codesyntax/volto-featured-block": "*"
+   }
+
+```
+
 ## Features
 
 Demo GIF
