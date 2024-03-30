@@ -1,3 +1,9 @@
+## 0.8.0 (2024-03-30)
+
+### Internal
+
+- Modernize package setup @erral [#9](https://github.com/codesyntax/volto-featured-block/pull/9)
+
 ### Changelog
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
