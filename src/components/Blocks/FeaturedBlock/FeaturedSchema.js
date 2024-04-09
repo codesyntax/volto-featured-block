@@ -18,7 +18,7 @@ const FeaturedSchema = (config, intl) => {
     properties: {
       variation: {
         title: intl.formatMessage(messages.variation),
-        type: 'array',
+        type: 'choice',
         choices: [...variations],
       },
       title: {
