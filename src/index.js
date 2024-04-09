@@ -4,8 +4,12 @@ import {
   FeaturedBlockView,
   FeaturedBlockEdit,
 } from './components/Blocks/FeaturedBlock';
-import { CarouselFeaturedView, FeaturedViewImageLeft, FeaturedViewImageRight } from './components/Blocks/FeaturedBlock/Variations';
-import { imageSchemaEnhancer } from './components/Blocks/FeaturedBlock/utils'
+import {
+  CarouselFeaturedView,
+  FeaturedViewImageLeft,
+  FeaturedViewImageRight,
+} from './components/Blocks/FeaturedBlock/Variations';
+import { imageSchemaEnhancer } from './components/Blocks/FeaturedBlock/utils';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig = {
@@ -30,7 +34,7 @@ const applyConfig = (config) => {
         {
           id: 'carousel',
           isDefault: true,
-          title: 'Carousel',
+          title: 'Banner',
           template: CarouselFeaturedView,
         },
         {
@@ -38,14 +42,14 @@ const applyConfig = (config) => {
           isDefault: true,
           title: 'Image Left',
           template: FeaturedViewImageLeft,
-          schemaEnhancer: imageSchemaEnhancer
+          schemaEnhancer: imageSchemaEnhancer,
         },
         {
           id: 'right',
           isDefault: true,
           title: 'Image Right',
           template: FeaturedViewImageRight,
-          schemaEnhancer: imageSchemaEnhancer
+          schemaEnhancer: imageSchemaEnhancer,
         },
       ],
     },
