@@ -35,7 +35,7 @@ export const FeaturedViewImageRight = (props) => {
                 </div>
                 </GridColumn>
                 <GridColumn width="6">
-                    {data?.image.length > 0 &&
+                    {data?.image?.length > 0 &&
                         <Component componentName="Image"
                             item={data?.image[0]}
                             alt=""
