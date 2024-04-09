@@ -14,7 +14,7 @@ const FeaturedBlockView = (props) => {
   }
 
   return <div className={cx('block featured-block', className)}>
-    <BodyTemplate data={data} isEditMode={false} {...props} />;
+    <BodyTemplate data={data} isEditMode={false} {...props} />
   </div>
 };
 export default withBlockExtensions(FeaturedBlockView);
