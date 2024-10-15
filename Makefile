@@ -101,3 +101,28 @@ test-acceptance: ## Start Cypress in interactive mode
 .PHONY: test-acceptance-headless
 test-acceptance-headless: ## Run cypress tests in headless mode for CI
 	pnpm --filter @plone/volto exec cypress run --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
+
+.PHONY: ci-acceptance-backend-start
+ci-acceptance-backend-start: ## Start backend acceptance server in headless mode for CI
+	docker run -i --rm -p 55001:55001 $(DOCKER_IMAGE_ACCEPTANCE)
+
+.PHONY: ci-acceptance-test
+ci-acceptance-test: ## Run cypress tests in headless mode for CI
+	pnpm --filter @plone/volto exec cypress run --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/main/**/*.{js,jsx,ts,tsx}'
+
+# a11y tests
+.PHONY: acceptance-a11y-frontend-prod-start
+acceptance-a11y-frontend-prod-start: ## Start a11y acceptance frontend in prod mode
+	pnpm build && pnpm start:prod
+
+.PHONY: ci-acceptance-a11y-backend-start
+ci-acceptance-a11y-backend-start: ## Start acceptance a11y server in CI mode (no terminal attached)
+	docker run -i --rm --name=backend -p 8080:8080 -e SITE=Plone -e ADDONS='$(KGS)' $(DOCKER_IMAGE)
+
+.PHONY: acceptance-a11y-test
+acceptance-a11y-test: ## Start a11y Cypress in interactive mode
+	CYPRESS_a11y=1 CYPRESS_API_PATH=http://localhost:8080/Plone pnpm exec cypress open specPattern=$(CURRENT_DIR)'/cypress/tests/a11y/**/*.{js,jsx,ts,tsx}'
+
+.PHONY: ci-acceptance-a11y-test
+ci-acceptance-a11y-test: ## Run a11y cypress tests in headless mode for CI
+	CYPRESS_a11y=1 CYPRESS_API_PATH=http://localhost:8080/Plone pnpm exec cypress run --config specPattern=$(CURRENT_DIR)'/cypress/tests/a11y/**/*.{js,jsx,ts,tsx}'
