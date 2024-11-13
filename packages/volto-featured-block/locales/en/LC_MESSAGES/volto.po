@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Edit"
+#: components/Blocks/FeaturedBlock/FeaturedImageEditor
+msgid "Edit image"
+msgstr ""
+
+#. Default: "Edit or remove image"
+#: components/Blocks/FeaturedBlock/FeaturedImageEditor
+msgid "Edit or remove image"
+msgstr ""
+
+#. Default: "Remove"
+#: components/Blocks/FeaturedBlock/FeaturedImageEditor
+msgid "Remove image"
+msgstr ""
+
+#. Default: "Upload or select an image"
+#: components/Blocks/FeaturedBlock/FeaturedImageEditor
+msgid "Upload image"
+msgstr ""
+
+#. Default: "Uploading file"
+#: components/Blocks/FeaturedBlock/FeaturedImageEditor
+msgid "Uploading file"
+msgstr ""
+
+#. Default: "Description"
+#: components/Blocks/FeaturedBlock/messages
+msgid "featuredDescription"
+msgstr ""
+
+#. Default: "Link Text"
+#: components/Blocks/FeaturedBlock/messages
+msgid "featuredLinkText"
+msgstr ""
+
+#. Default: "Link URL"
+#: components/Blocks/FeaturedBlock/messages
+msgid "featuredLinkUrl"
+msgstr ""
+
+#. Default: "Select site content or paste external url"
+#: components/Blocks/FeaturedBlock/messages
+msgid "featuredLinkUrlDescription"
+msgstr ""
+
+#. Default: "Title"
+#: components/Blocks/FeaturedBlock/messages
+msgid "featuredTitle"
+msgstr ""
+
+#. Default: "Variation"
+#: components/Blocks/FeaturedBlock/messages
+msgid "variation"
+msgstr ""
