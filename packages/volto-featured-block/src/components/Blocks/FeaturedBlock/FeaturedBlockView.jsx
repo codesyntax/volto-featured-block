@@ -4,7 +4,7 @@ import cx from 'classnames';
 import { withBlockExtensions } from '@plone/volto/helpers';
 
 const FeaturedBlockView = (props) => {
-  const { data, className = '' } = props;
+  const { data, className = '', style } = props;
   const variationsConfig = config.blocks.blocksConfig['csFeatured'].variations;
   let BodyTemplate = '';
   for (let variation in variationsConfig) {
@@ -14,7 +14,7 @@ const FeaturedBlockView = (props) => {
   }
 
   return (
-    <div className={cx('block featured-block', className)}>
+    <div className={cx('block featured-block', className)} style={style}>
       <BodyTemplate data={data} isEditMode={false} {...props} />
     </div>
   );
