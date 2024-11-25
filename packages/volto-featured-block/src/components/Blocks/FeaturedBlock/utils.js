@@ -1,6 +1,6 @@
 export const imageSchemaEnhancer = ({ schema, formData, intl }) => {
   schema.properties.image = {
-    widget: 'object_browser',
+    widget: 'image',
     title: 'Image',
     mode: 'image',
     multiple: false,
