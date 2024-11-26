@@ -13,7 +13,6 @@ export const FeaturedBlockDataAdapter = ({
     ...data,
     [id]: value,
   };
-  console.log('dataSaved', dataSaved);
   if (value === null) {
     dataSaved = {
       ...dataSaved,
