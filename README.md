@@ -9,7 +9,18 @@
 
 ## Features
 
-<!-- List your awesome features here -->
+- Page composition tool to feature or highlight items in your pages.
+- No need to use existing content of the site to create this blocks (if you want to do that, use the core grid block)
+- Variation and style support
+
+## Upgrade guide
+
+### Upgrade to 1.0.0
+
+This version is not backwards compatible with blocks created with previous versions of this package.
+
+The blocks will keep working but you may need to re-add some content into your pages.
+
 
 ## Installation
 
