@@ -5,6 +5,7 @@ import { ConditionalLink } from '@plone/volto/components';
 
 const CarouselFeaturedView = (props) => {
   const { data, isEditMode } = props;
+  console.log('data', data);
   return (
     <div
       className="banner-top-main"
@@ -12,7 +13,6 @@ const CarouselFeaturedView = (props) => {
         backgroundImage: `url(${data?.url}/@@images/image)`,
       }}
     >
-      {isEditMode && <FeaturedImageEditor {...props} />}
       <div className="ui two column grid">
         <div className="row">
           <div className="ten wide column left floated"></div>
@@ -21,7 +21,7 @@ const CarouselFeaturedView = (props) => {
               {data.title && (
                 <h2>
                   <ConditionalLink
-                    to={data?.link?.[0]?.['@id']}
+                    to={data?.href?.[0]?.['@id']}
                     condition={!isEditMode}
                   >
                     {data?.title}
@@ -29,14 +29,14 @@ const CarouselFeaturedView = (props) => {
                 </h2>
               )}
               {data.description && <h3>{data?.description} </h3>}
-              {data.linkText && (
+              {data.hrefText && (
                 <Button
                   as="a"
                   size="large"
                   href={'' + data?.link?.[0]?.['@id']}
                   primary
                 >
-                  {data.linkText}
+                  {data.hrefText}
                 </Button>
               )}
             </div>

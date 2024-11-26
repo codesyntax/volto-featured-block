@@ -12,7 +12,14 @@ const FeaturedSchema = (config, intl) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['variation', 'title', 'description', 'link', 'linkText'],
+        fields: [
+          'variation',
+          'title',
+          'description',
+          'url',
+          'href',
+          'hrefText',
+        ],
       },
     ],
     properties: {
@@ -29,7 +36,7 @@ const FeaturedSchema = (config, intl) => {
         title: intl.formatMessage(messages.featuredDescription),
         type: 'string',
       },
-      link: {
+      href: {
         title: intl.formatMessage(messages.featuredLinkUrl),
         description: intl.formatMessage(messages.featuredLinkUrlDescription),
         widget: 'object_browser',
@@ -37,9 +44,16 @@ const FeaturedSchema = (config, intl) => {
         selectedItemAttrs: ['Title', 'Description', '@type', '@id'],
         allowExternals: true,
       },
-      linkText: {
+      hrefText: {
         title: intl.formatMessage(messages.featuredLinkText),
         type: 'string',
+      },
+      url: {
+        widget: 'image',
+        title: 'Image',
+        mode: 'image',
+        multiple: false,
+        allowExternals: true,
       },
     },
     required: [],

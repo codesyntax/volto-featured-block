@@ -10,6 +10,7 @@ import {
   FeaturedViewImageRight,
 } from './components/Blocks/FeaturedBlock/Variations';
 import { imageSchemaEnhancer } from './components/Blocks/FeaturedBlock/utils';
+import { FeaturedBlockDataAdapter } from './components/Blocks/FeaturedBlock/FeaturedAdapter';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig = {
@@ -30,6 +31,7 @@ const applyConfig = (config) => {
         addPermission: [], // Future proof (not implemented yet) add user permission role(s)
         view: [], // Future proof (not implemented yet) view user role(s)
       },
+      dataAdapter: FeaturedBlockDataAdapter,
       variations: [
         {
           id: 'carousel',
@@ -42,14 +44,12 @@ const applyConfig = (config) => {
           isDefault: true,
           title: 'Image Left',
           template: FeaturedViewImageLeft,
-          schemaEnhancer: imageSchemaEnhancer,
         },
         {
           id: 'right',
           isDefault: true,
           title: 'Image Right',
           template: FeaturedViewImageRight,
-          schemaEnhancer: imageSchemaEnhancer,
         },
       ],
     },
