@@ -9,8 +9,9 @@ import {
   FeaturedViewImageLeft,
   FeaturedViewImageRight,
 } from './components/Blocks/FeaturedBlock/Variations';
-import { imageSchemaEnhancer } from './components/Blocks/FeaturedBlock/utils';
 import { FeaturedBlockDataAdapter } from './components/Blocks/FeaturedBlock/FeaturedAdapter';
+import { FeaturedViewImageLeftRichText } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeftRichText';
+import { FeaturedViewImageRightRichText } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageRightRichText';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig = {
@@ -35,21 +36,33 @@ const applyConfig = (config) => {
       variations: [
         {
           id: 'carousel',
-          isDefault: true,
+          isDefault: false,
           title: 'Banner',
           template: CarouselFeaturedView,
         },
         {
           id: 'left',
-          isDefault: true,
+          isDefault: false,
           title: 'Image Left',
           template: FeaturedViewImageLeft,
+        },
+        {
+          id: 'left-richtext',
+          isDefault: false,
+          title: 'Image Left (with RichText)',
+          template: FeaturedViewImageLeftRichText,
         },
         {
           id: 'right',
           isDefault: true,
           title: 'Image Right',
           template: FeaturedViewImageRight,
+        },
+        {
+          id: 'right-richtext',
+          isDefault: false,
+          title: 'Image Right (with RichText)',
+          template: FeaturedViewImageRightRichText,
         },
       ],
     },

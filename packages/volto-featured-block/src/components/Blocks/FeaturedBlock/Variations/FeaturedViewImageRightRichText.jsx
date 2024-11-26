@@ -1,28 +1,40 @@
 import { ConditionalLink } from '@plone/volto/components';
 import { Button, GridRow, GridColumn, Grid } from 'semantic-ui-react';
 import config from '@plone/volto/registry';
-export const FeaturedViewImageRight = (props) => {
-  const { data } = props;
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
+import { DetachedTextBlockEditor } from '@plone/volto-slate/blocks/Text/DetachedTextBlockEditor';
+export const FeaturedViewImageRightRichText = (props) => {
+  const { data, isEditMode } = props;
   let Image = config.getComponent('Image').component;
   return (
     <Grid divided="vertically">
       <GridRow>
         <GridColumn width="6">
           <div className="featured-block-item-content">
-            <div className="featured-block-item-content-title">
-              {data?.title && (
+            {data?.title && (
+              <div className="featured-block-item-content-title">
                 <h2>
                   <ConditionalLink to={data?.href?.[0]?.['@id']}>
                     {data?.title}
                   </ConditionalLink>
                 </h2>
+              </div>
+            )}
+            {data?.description && (
+              <div className="featured-block-item-content-description">
+                {data?.description && <h3>{data.description} </h3>}
+              </div>
+            )}
+            <div className="featured-block-item-content-value">
+              {isEditMode ? (
+                <DetachedTextBlockEditor {...props} />
+              ) : (
+                <TextBlockView {...props} />
               )}
             </div>
-            <div className="featured-block-item-content-description">
-              {data?.description && <h3>{data.description} </h3>}
-            </div>
-            <div className="featured-block-item-content-link">
-              {data?.hrefText && (
+
+            {data?.hrefText && (
+              <div className="featured-block-item-content-link">
                 <Button
                   as="a"
                   size="large"
@@ -31,8 +43,8 @@ export const FeaturedViewImageRight = (props) => {
                 >
                   {data.hrefText}
                 </Button>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </GridColumn>
         <GridColumn width="6">
