@@ -8,10 +8,10 @@ import {
   CarouselFeaturedView,
   FeaturedViewImageLeft,
   FeaturedViewImageRight,
+  FeaturedViewImageLeftRichText,
+  FeaturedViewImageRightRichText,
 } from './components/Blocks/FeaturedBlock/Variations';
 import { FeaturedBlockDataAdapter } from './components/Blocks/FeaturedBlock/FeaturedAdapter';
-import { FeaturedViewImageLeftRichText } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeftRichText';
-import { FeaturedViewImageRightRichText } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageRightRichText';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig = {

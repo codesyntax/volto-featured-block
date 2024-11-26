@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'semantic-ui-react';
 import { ConditionalLink } from '@plone/volto/components';
 
-const CarouselFeaturedView = (props) => {
+export const CarouselFeaturedView = (props) => {
   const { data, isEditMode } = props;
   return (
     <div
@@ -44,5 +44,3 @@ const CarouselFeaturedView = (props) => {
     </div>
   );
 };
-
-export default CarouselFeaturedView;
