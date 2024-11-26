@@ -11,7 +11,7 @@ export const getSelectedVariation = (variationsConfig, data) => {
 
   if (!!data?.variation) {
     selectedVariationInfos = variations.filter(
-      (item) => item.variationId == data.variation,
+      (item) => item.variationId === data.variation,
     );
   } else {
     selectedVariationInfos = variations.filter((item) => item.isDefault);

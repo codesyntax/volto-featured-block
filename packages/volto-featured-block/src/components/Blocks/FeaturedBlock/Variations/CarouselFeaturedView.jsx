@@ -1,11 +1,9 @@
 import React from 'react';
-import FeaturedImageEditor from '../FeaturedImageEditor';
 import { Button } from 'semantic-ui-react';
 import { ConditionalLink } from '@plone/volto/components';
 
 const CarouselFeaturedView = (props) => {
   const { data, isEditMode } = props;
-  console.log('data', data);
   return (
     <div
       className="banner-top-main"

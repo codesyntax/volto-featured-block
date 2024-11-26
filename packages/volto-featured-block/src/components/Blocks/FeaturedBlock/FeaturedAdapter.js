@@ -41,6 +41,5 @@ export const FeaturedBlockDataAdapter = ({
       image_scales: item.image_scales,
     };
   }
-  console.log('dataSaved', dataSaved);
   onChangeBlock(block, dataSaved);
 };
