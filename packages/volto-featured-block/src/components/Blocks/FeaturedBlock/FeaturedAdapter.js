@@ -1,5 +1,5 @@
+// Taken from @kitconcept/volto-highlight-block
 import { flattenToAppURL } from '@plone/volto/helpers';
-
 export const FeaturedBlockDataAdapter = ({
   block,
   data,
@@ -13,13 +13,14 @@ export const FeaturedBlockDataAdapter = ({
     ...data,
     [id]: value,
   };
+  console.log('dataSaved', dataSaved);
   if (value === null) {
     dataSaved = {
       ...dataSaved,
       image_field: undefined,
       image_scales: undefined,
     };
-  } else if (id === 'image' && typeof value === 'object') {
+  } else if (id === 'url' && typeof value === 'object') {
     dataSaved = {
       ...dataSaved,
       [id]: flattenToAppURL(value['@id']),
@@ -28,13 +29,13 @@ export const FeaturedBlockDataAdapter = ({
     };
   }
   // I uploaded the image right now, no image info
-  else if (id === 'image' && typeof value === 'string' && content) {
+  else if (id === 'url' && typeof value === 'string' && content) {
     dataSaved = {
       ...dataSaved,
       image_field: 'image',
       image_scales: { image: [content?.image] },
     };
-  } else if (id === 'image' && typeof value === 'string' && item) {
+  } else if (id === 'url' && typeof value === 'string' && item) {
     dataSaved = {
       ...dataSaved,
       image_field: item.image_field,

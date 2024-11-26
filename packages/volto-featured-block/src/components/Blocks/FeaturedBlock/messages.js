@@ -24,6 +24,10 @@ const messages = defineMessages({
     id: 'featuredLinkText',
     defaultMessage: 'Link Text',
   },
+  featuredBlock: {
+    id: 'featuredBlock',
+    defaultMessage: 'Featured block',
+  },
 });
 
 export default messages;
