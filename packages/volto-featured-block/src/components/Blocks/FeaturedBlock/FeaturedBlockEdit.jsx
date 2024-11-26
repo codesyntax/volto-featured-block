@@ -1,28 +1,15 @@
 import React from 'react';
 import FeaturedSchema from './FeaturedSchema';
 import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
-
 import config from '@plone/volto/registry';
+import { getSelectedVariation } from './utils';
+
 const FeaturedBlockEdit = (props) => {
   const { block, data, onChangeBlock, selected, intl } = props;
-  const variationsConfig = config.blocks.blocksConfig['csFeatured'].variations;
-  let BodyTemplate = '';
-  let variationId = '';
-  if (!!data?.variation) {
-    for (let variation in variationsConfig) {
-      if (variationsConfig[variation].id === data.variation) {
-        variationId = data.variation;
-        BodyTemplate = variationsConfig[variation].template;
-      }
-    }
-  } else {
-    for (let variation in variationsConfig) {
-      if (variationsConfig[variation].isDefault === true) {
-        variationId = variationsConfig[variation].id;
-        BodyTemplate = variationsConfig[variation].template;
-      }
-    }
-  }
+  const variations = config.blocks.blocksConfig['csFeatured'].variations;
+
+  const { variationId, BodyTemplate } = getSelectedVariation(variations, data);
+
   React.useEffect(() => {
     onChangeBlock(block, {
       ...data,
