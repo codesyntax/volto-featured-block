@@ -1,3 +1,12 @@
+## 1.0.1 (2024-12-04)
+
+## 1.0.0 (2024-12-04)
+
+### Feature
+
+- use withBlockExtensions to get any styling addition and add some additional variations @erral [#10](https://github.com/codesyntax/volto-featured-block/issue/10)
+- Volto 18 support @erral [#11](https://github.com/codesyntax/volto-featured-block/issue/11)
+
 ## 0.8.0 (2024-03-30)
 
 ### Internal
