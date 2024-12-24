@@ -1,7 +1,6 @@
 import homeBand from '@plone/volto/icons/image-wide.svg';
 import FeaturedBlockView from './components/Blocks/FeaturedBlock/FeaturedBlockView';
 import FeaturedBlockEdit from './components/Blocks/FeaturedBlock/FeaturedBlockEdit';
-import FeaturedSchema from './components/Blocks/FeaturedBlock/FeaturedSchema';
 import { CarouselFeaturedView } from './components/Blocks/FeaturedBlock/Variations/CarouselFeaturedView';
 import { FeaturedViewImageLeft } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeft';
 import { FeaturedViewImageLeftRichText } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeftRichText';
