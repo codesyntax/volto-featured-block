@@ -1,16 +1,13 @@
 import homeBand from '@plone/volto/icons/image-wide.svg';
-import BlockSettingsSchema from '@plone/volto/components/manage/Blocks/Block/Schema';
-import {
-  FeaturedBlockView,
-  FeaturedBlockEdit,
-} from './components/Blocks/FeaturedBlock';
-import {
-  CarouselFeaturedView,
-  FeaturedViewImageLeft,
-  FeaturedViewImageRight,
-  FeaturedViewImageLeftRichText,
-  FeaturedViewImageRightRichText,
-} from './components/Blocks/FeaturedBlock/Variations';
+import FeaturedBlockView from './components/Blocks/FeaturedBlock/FeaturedBlockView';
+import FeaturedBlockEdit from './components/Blocks/FeaturedBlock/FeaturedBlockEdit';
+import FeaturedSchema from './components/Blocks/FeaturedBlock/FeaturedSchema';
+import { CarouselFeaturedView } from './components/Blocks/FeaturedBlock/Variations/CarouselFeaturedView';
+import { FeaturedViewImageLeft } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeft';
+import { FeaturedViewImageLeftRichText } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeftRichText';
+import { FeaturedViewImageRight } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageRight';
+import { FeaturedViewImageRightRichText } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageRightRichText';
+
 import { FeaturedBlockDataAdapter } from './components/Blocks/FeaturedBlock/FeaturedAdapter';
 
 const applyConfig = (config) => {
@@ -22,8 +19,7 @@ const applyConfig = (config) => {
       icon: homeBand, // The icon used in the block chooser
       group: 'common', // The group (blocks can be grouped, displayed in the chooser)
       view: FeaturedBlockView, // The view mode component
-      edit: FeaturedBlockEdit, // The edit mode component
-      schema: BlockSettingsSchema,
+      edit: FeaturedBlockEdit, // The edit mode component. No need to define it, it will use the default one
       restricted: false, // If the block is restricted, it won't show in the chooser
       mostUsed: true, // A meta group `most used`, appearing at the top of the chooser
       blockHasOwnFocusManagement: false, // Set this to true if the block manages its own focus
