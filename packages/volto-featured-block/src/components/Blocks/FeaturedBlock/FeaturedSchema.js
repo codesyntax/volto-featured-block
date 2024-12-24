@@ -1,33 +1,18 @@
 import messages from './messages';
-const FeaturedSchema = (config, intl) => {
-  const variationsConfig = config.blocks.blocksConfig['csFeatured'].variations;
-  const variations = Object.keys(variationsConfig).map((variation) => [
-    variationsConfig[variation].id,
-    variationsConfig[variation].title,
-  ]);
 
+import { withVariationSchemaEnhancer } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
+
+const FeaturedSchema = (config, intl) => {
   return {
     title: 'Featured',
     fieldsets: [
       {
         id: 'default',
         title: 'Default',
-        fields: [
-          'variation',
-          'title',
-          'description',
-          'url',
-          'href',
-          'hrefText',
-        ],
+        fields: ['title', 'description', 'url', 'href', 'hrefText'],
       },
     ],
     properties: {
-      variation: {
-        title: intl.formatMessage(messages.variation),
-        type: 'choice',
-        choices: [...variations],
-      },
       title: {
         title: intl.formatMessage(messages.featuredTitle),
         type: 'string',
