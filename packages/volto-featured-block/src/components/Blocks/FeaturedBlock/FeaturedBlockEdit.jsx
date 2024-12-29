@@ -1,27 +1,32 @@
 import React from 'react';
-import FeaturedSchema from './FeaturedSchema';
 import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
-import config from '@plone/volto/registry';
-import { getSelectedVariation } from './utils';
 import messages from './messages';
 import { useSelector } from 'react-redux';
+import { withBlockExtensions } from '@plone/volto/helpers';
 
 const FeaturedBlockEdit = (props) => {
-  const { block, blocksConfig, data, onChangeBlock, selected, intl } = props;
-  const variations = config.blocks.blocksConfig['csFeatured'].variations;
+  const {
+    block,
+    blocksConfig,
+    data,
+    onChangeBlock,
+    selected,
+    intl,
+    variation,
+  } = props;
 
-  const { variationId, BodyTemplate } = getSelectedVariation(variations, data);
+  const BodyTemplate = variation.template;
+  // Use the dataAdapter defined in the block configuration
+  // this way we can adapt the information coming from the imagewidget
+  // on the first moment when we select or upload the image using this widget
+  // this data adapter makes the properties `image_field`, `image_scales` and `url`
+  // available right away in the block `data`, and this way we can easily interact
+  // with the variations of the block to see the image rendered correctly
   const dataAdapter = blocksConfig[data['@type']].dataAdapter;
+  const schema = blocksConfig[data['@type']].blockSchema;
   const request = useSelector((state) => state.content.subrequests[block]);
   const content = request?.data;
 
-  React.useEffect(() => {
-    onChangeBlock(block, {
-      ...data,
-      variation: variationId,
-    });
-    /* eslint-disable-next-line */
-  }, []);
   return (
     <>
       <BodyTemplate
@@ -32,7 +37,7 @@ const FeaturedBlockEdit = (props) => {
       <SidebarPortal selected={selected}>
         <BlockDataForm
           title={intl.formatMessage(messages.featuredBlock)}
-          schema={FeaturedSchema(config, intl)}
+          schema={schema({ ...props })}
           onChangeField={(id, value, item) => {
             dataAdapter({
               block,
@@ -53,4 +58,5 @@ const FeaturedBlockEdit = (props) => {
   );
 };
 
-export default FeaturedBlockEdit;
+// the withBlockExtensions call will make variations available out of the box
+export default withBlockExtensions(FeaturedBlockEdit);

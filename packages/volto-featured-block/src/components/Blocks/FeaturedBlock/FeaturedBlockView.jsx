@@ -1,20 +1,15 @@
 import React from 'react';
-import config from '@plone/volto/registry';
 import cx from 'classnames';
 import { withBlockExtensions } from '@plone/volto/helpers';
-import { getSelectedVariation } from './utils';
 
 const FeaturedBlockView = (props) => {
-  const { data, className = '', style } = props;
+  const { data, variation, className = '', style } = props;
 
-  const variations = config.blocks.blocksConfig['csFeatured'].variations;
-
-  const { variationId, BodyTemplate } = getSelectedVariation(variations, data);
-
+  const BodyTemplate = variation.template;
   return (
     <div
       className={cx(
-        `block featured-block featured-block-${variationId}`,
+        `block featured-block featured-block-${variation.id}`,
         className,
       )}
       style={style}
@@ -23,4 +18,5 @@ const FeaturedBlockView = (props) => {
     </div>
   );
 };
+// the withBlockExtensions call will make variations available out of the box
 export default withBlockExtensions(FeaturedBlockView);

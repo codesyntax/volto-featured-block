@@ -1,8 +1,6 @@
 import messages from './messages';
 
-import { withVariationSchemaEnhancer } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
-
-const FeaturedSchema = (config, intl) => {
+const FeaturedSchema = ({ intl }) => {
   return {
     title: 'Featured',
     fieldsets: [

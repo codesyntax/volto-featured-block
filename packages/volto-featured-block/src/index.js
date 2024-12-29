@@ -1,5 +1,6 @@
 import homeBand from '@plone/volto/icons/image-wide.svg';
 import FeaturedBlockView from './components/Blocks/FeaturedBlock/FeaturedBlockView';
+import FeaturedSchema from './components/Blocks/FeaturedBlock/FeaturedSchema';
 import FeaturedBlockEdit from './components/Blocks/FeaturedBlock/FeaturedBlockEdit';
 import { CarouselFeaturedView } from './components/Blocks/FeaturedBlock/Variations/CarouselFeaturedView';
 import { FeaturedViewImageLeft } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeft';
@@ -13,21 +14,22 @@ const applyConfig = (config) => {
   config.blocks.blocksConfig = {
     ...config.blocks.blocksConfig,
     csFeatured: {
-      id: 'csFeatured', // The name (id) of the block
-      title: 'Featured', // The display name of the block
-      icon: homeBand, // The icon used in the block chooser
-      group: 'common', // The group (blocks can be grouped, displayed in the chooser)
-      view: FeaturedBlockView, // The view mode component
-      edit: FeaturedBlockEdit, // The edit mode component. No need to define it, it will use the default one
-      restricted: false, // If the block is restricted, it won't show in the chooser
-      mostUsed: true, // A meta group `most used`, appearing at the top of the chooser
-      blockHasOwnFocusManagement: false, // Set this to true if the block manages its own focus
-      sidebarTab: 1, // The sidebar tab you want to be selected when selecting the block
+      id: 'csFeatured',
+      title: 'Featured',
+      icon: homeBand,
+      group: 'common',
+      view: FeaturedBlockView,
+      edit: FeaturedBlockEdit,
+      blockSchema: FeaturedSchema, // We define the schema here and the Edit component will use this
+      restricted: false,
+      mostUsed: true,
+      blockHasOwnFocusManagement: false,
+      sidebarTab: 1,
       security: {
-        addPermission: [], // Future proof (not implemented yet) add user permission role(s)
-        view: [], // Future proof (not implemented yet) view user role(s)
+        addPermission: [],
+        view: [],
       },
-      dataAdapter: FeaturedBlockDataAdapter,
+      dataAdapter: FeaturedBlockDataAdapter, // Used by the Edit component. See there for more information
       variations: [
         {
           id: 'carousel',
