@@ -1,6 +1,6 @@
-import { ConditionalLink } from '@plone/volto/components';
-import { Button, GridRow, GridColumn, Grid } from 'semantic-ui-react';
+import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
 import config from '@plone/volto/registry';
+import { Button, Grid, GridColumn, GridRow } from 'semantic-ui-react';
 export const FeaturedViewImageRight = (props) => {
   const { data } = props;
   let Image = config.getComponent('Image').component;

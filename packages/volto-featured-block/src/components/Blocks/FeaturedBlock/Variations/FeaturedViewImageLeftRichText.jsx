@@ -1,8 +1,8 @@
-import { ConditionalLink } from '@plone/volto/components';
-import { Button, GridRow, GridColumn, Grid } from 'semantic-ui-react';
-import config from '@plone/volto/registry';
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 import { DetachedTextBlockEditor } from '@plone/volto-slate/blocks/Text/DetachedTextBlockEditor';
+import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
+import config from '@plone/volto/registry';
+import { Button, Grid, GridColumn, GridRow } from 'semantic-ui-react';
 export const FeaturedViewImageLeftRichText = (props) => {
   const { data, isEditMode } = props;
   let Image = config.getComponent('Image').component;

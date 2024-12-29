@@ -1,6 +1,6 @@
-import React from 'react';
+import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtensions';
 import cx from 'classnames';
-import { withBlockExtensions } from '@plone/volto/helpers';
+import React from 'react';
 
 const FeaturedBlockView = (props) => {
   const { data, variation, className = '', style } = props;

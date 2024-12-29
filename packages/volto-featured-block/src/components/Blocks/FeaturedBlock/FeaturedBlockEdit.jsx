@@ -1,8 +1,9 @@
+import { BlockDataForm } from '@plone/volto/components/manage/Form';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
+import withBlockExtensions from '@plone/volto/helpers/Extensions/withBlockExtensions';
 import React from 'react';
-import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
-import messages from './messages';
 import { useSelector } from 'react-redux';
-import { withBlockExtensions } from '@plone/volto/helpers';
+import messages from './messages';
 
 const FeaturedBlockEdit = (props) => {
   const {

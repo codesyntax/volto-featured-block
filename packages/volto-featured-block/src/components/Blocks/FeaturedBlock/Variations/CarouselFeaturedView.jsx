@@ -1,6 +1,6 @@
+import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import { ConditionalLink } from '@plone/volto/components';
 
 export const CarouselFeaturedView = (props) => {
   const { data, isEditMode } = props;
