@@ -2,7 +2,7 @@ import homeBand from '@plone/volto/icons/image-wide.svg';
 import FeaturedBlockView from './components/Blocks/FeaturedBlock/FeaturedBlockView';
 import FeaturedSchema from './components/Blocks/FeaturedBlock/FeaturedSchema';
 import FeaturedBlockEdit from './components/Blocks/FeaturedBlock/FeaturedBlockEdit';
-import { CarouselFeaturedView } from './components/Blocks/FeaturedBlock/Variations/CarouselFeaturedView';
+import { BannerFeaturedView } from './components/Blocks/FeaturedBlock/Variations/BannerFeaturedView';
 import { FeaturedViewImageLeft } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeft';
 import { FeaturedViewImageLeftRichText } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageLeftRichText';
 import { FeaturedViewImageRight } from './components/Blocks/FeaturedBlock/Variations/FeaturedViewImageRight';
@@ -35,7 +35,7 @@ const applyConfig = (config) => {
           id: 'carousel',
           isDefault: false,
           title: 'Banner',
-          template: CarouselFeaturedView,
+          template: BannerFeaturedView,
         },
         {
           id: 'left',
